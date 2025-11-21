@@ -36,6 +36,7 @@
 								<li><a href="#work">ADHD Systems</a></li>
 								<li><a href="#about">Nature Dogs</a></li>
 								<li><a href="#contact">Contact</a></li>
+								<li><a href="#blog">Blog</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -133,57 +134,75 @@
 						</article>
 						
 						<script>
-						document.addEventListener("DOMContentLoaded", function () {
-							const form = document.getElementById("contactForm");
-							const status = document.getElementById("formStatus");
-						
-							if (!form || !status) return; // safety check
-						
-							form.addEventListener("submit", async function (e) {
-								e.preventDefault();
-						
-								// Show "sending" state so you know it's working
-								status.style.display = "block";
-								status.style.color = "#cccccc";
-								status.textContent = "Sending...";
-						
-								const formData = new FormData(form);
-						
-								try {
-									const response = await fetch(form.action, {
-										method: "POST",
-										body: formData
-									});
-						
-									if (response.ok) {
-									    status.style.color = "#4CAF50";
-									    status.textContent = "Message sent! I’ll get back to you soon. 💌";
-									    form.reset();
-									
-									    // Show message for 5 seconds before hiding it
-									    setTimeout(() => {
-									        status.style.display = "none";
-									        status.textContent = "";
-									    }, 5000); // 5,000 ms = 5 seconds
-									}
-								 } else {
+							document.addEventListener("DOMContentLoaded", function () {
+								const form = document.getElementById("contactForm");
+								const status = document.getElementById("formStatus");
+							
+								if (!form || !status) return; // safety check
+							
+								form.addEventListener("submit", async function (e) {
+									e.preventDefault();
+							
+									// Show "sending" state so you know it's working
+									status.style.display = "block";
+									status.style.color = "#cccccc";
+									status.textContent = "Sending...";
+							
+									const formData = new FormData(form);
+							
+									try {
+										const response = await fetch(form.action, {
+											method: "POST",
+											body: formData
+										});
+							
+										if (response.ok) {
+										    status.style.color = "#4CAF50";
+										    status.textContent = "Message sent! I’ll get back to you soon. 💌";
+										    form.reset();
+										
+										    // Show message for 5 seconds before hiding it
+										    setTimeout(() => {
+										        status.style.display = "none";
+										        status.textContent = "";
+										    }, 5000); // 5,000 ms = 5 seconds
+										}
+									 } else {
+											status.style.color = "#E53935";
+											status.textContent = "Something went wrong. Please try again.";
+										}
+									} catch (err) {
 										status.style.color = "#E53935";
-										status.textContent = "Something went wrong. Please try again.";
+										status.textContent = "Network error. Please check your connection and try again.";
 									}
-								} catch (err) {
-									status.style.color = "#E53935";
-									status.textContent = "Network error. Please check your connection and try again.";
-								}
+								});
+							
+								form.addEventListener("reset", function () {
+									// Optional: hide the message on reset
+									status.style.display = "none";
+									status.textContent = "";
+								});
 							});
-						
-							form.addEventListener("reset", function () {
-								// Optional: hide the message on reset
-								status.style.display = "none";
-								status.textContent = "";
-							});
-						});
 						</script>
-
+						
+						<!-- Blog -->
+						<article id="blog">
+						    <h2 class="major">Blog</h2>
+						
+						    <span class="image main"><img src="images/blog-cover.jpg" alt="Blog cover image" /></span>
+						
+						    <p>Welcome to the Digital Dag Studio blog — where I share cozy ADHD-friendly routines, nature walk guides for anxious pups, and gentle reflections on slow living.</p>
+						
+						    <h3>Latest Posts</h3>
+						    <ul>
+						        <li><a href="#post1">5-Step Morning Routine for Low-Energy Days</a></li>
+						        <li><a href="#post2">Nature Walk Rituals for Anxious Dogs</a></li>
+						        <li><a href="#post3">How to Start a Calm Planning Habit</a></li>
+						    </ul>
+						
+						    <p>More posts coming soon.</p>
+						</article>
+							
 						<!-- Elements (demo content; you can delete this whole article later if you don't need it)-->
 							<article id="elements">
 								<h2 class="major">Elements</h2>
@@ -447,6 +466,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
