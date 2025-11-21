@@ -473,70 +473,86 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="posts.js"></script>
 
 
-	<!-- Blog Logic to Main JS -->
-	<script>
-	document.addEventListener("DOMContentLoaded", () => {
-	  
-	  const blogList    = document.getElementById("blog-list");
-	  const postViewer  = document.getElementById("post-viewer");
-	  const postTitle   = document.getElementById("post-title");
-	  const postCover   = document.getElementById("post-cover");
-	  const postContent = document.getElementById("post-content");
-	
-	  /* Render Blog Post Grid */
-	  function renderBlogList() {
-	    blogList.innerHTML = posts
-	      .map((post, index) => `
-	        <article class="blog-card">
-	          <a href="#post-viewer" 
-	             class="blog-card-inner" 
-	             onclick="viewPost(${post.id})">
-	
-	            <div class="blog-card-cover">
-	              <img src="${post.cover}" 
-	                   alt="${post.title} cover image" />
-	            </div>
-	
-	            <div class="blog-card-footer">
-	              <span class="blog-card-step">${index + 1}</span>
-	              <h3 class="blog-card-title">${post.title}</h3>
-	              <p class="blog-card-date">${post.date}</p>
-	            </div>
-	
-	          </a>
-	        </article>
-	      `)
-	      .join("");
-	  }
-	
-	  /* View Single Post */
-	  window.viewPost = function (id) {
-	    const post = posts.find(p => p.id === id);
-	    if (!post) return;
-	
-	    postTitle.innerHTML = post.title;
-	    postCover.src       = post.cover;
-	    postContent.innerHTML = post.content;
-	
-	    document.getElementById("blog").style.display = "none";
-	    postViewer.style.display = "block";
-	  };
-	
-	  /* Handle Back Navigation */
-	  window.addEventListener("hashchange", () => {
-	    if (location.hash === "#blog") {
-	      postViewer.style.display = "none";
-	      document.getElementById("blog").style.display = "block";
-	    }
-	  });
-	
-	  /* Initialize Blog List */
-	  renderBlogList();
-	
-	});
-	</script>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Posts data (same folder as index.html) -->
+<script src="./posts.js"></script>
+
+<!-- Blog Logic -->
+<script>
+(function () {
+  const blogList    = document.getElementById("blog-list");
+  const postViewer  = document.getElementById("post-viewer");
+  const postTitle   = document.getElementById("post-title");
+  const postCover   = document.getElementById("post-cover");
+  const postContent = document.getElementById("post-content");
+
+  // Safety checks so we get clear console errors if something is wrong
+  console.log("posts =", window.posts);
+  console.log("blogList =", blogList);
+
+  if (!blogList || !window.posts) {
+    console.error("Blog init failed: blogList or posts is missing.");
+    return;
+  }
+
+  function renderBlogList() {
+    blogList.innerHTML = posts
+      .map((post, index) => `
+        <article class="blog-card">
+          <a href="#post-viewer"
+             class="blog-card-inner"
+             onclick="viewPost(${post.id}); return false;">
+
+            <div class="blog-card-cover">
+              <img src="${post.cover}" alt="${post.title} cover image" />
+            </div>
+
+            <div class="blog-card-footer">
+              <span class="blog-card-step">${index + 1}</span>
+              <h3 class="blog-card-title">${post.title}</h3>
+              <p class="blog-card-date">${post.date}</p>
+            </div>
+
+          </a>
+        </article>
+      `)
+      .join("");
+  }
+
+  // Make viewPost available globally for the onclick
+  window.viewPost = function (id) {
+    const post = posts.find((p) => p.id === id);
+    if (!post) return;
+
+    postTitle.innerHTML     = post.title;
+    postCover.src           = post.cover;
+    postContent.innerHTML   = post.content;
+
+    document.getElementById("blog").style.display = "none";
+    postViewer.style.display = "block";
+  };
+
+  // Handle going back to the list
+  window.addEventListener("hashchange", () => {
+    if (location.hash === "#blog") {
+      postViewer.style.display = "none";
+      document.getElementById("blog").style.display = "block";
+    }
+  });
+
+  // Initial render
+  renderBlogList();
+})();
+</script>
 	</body>
 </html>
+
 
 
 
