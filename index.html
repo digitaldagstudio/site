@@ -93,33 +93,81 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact & Collabs</h2>
-								<p>Have a question about a routine, want to collaborate, or interested in using my visuals in your content? Send a message below or reach out through social.</p> <!-- UPDATED -->
-								<form method="post" action="#"> <!-- You can swap `action` for a real form handler or mail service later --> <!-- UPDATED -->
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4" placeholder="Tell me what you’re working on, or which routine you’d love to see next."></textarea> <!-- UPDATED -->
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
+								<p>Have a question about a routine, want to collaborate, or interested in using my visuals in your content? Send a message below or reach out through social.</p>
+							
+								<form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    
+								    <!-- REQUIRED Web3Forms Access key -->
+								    <input type="hidden" name="access_key" value="d987174c-445b-431c-9fc0-5ba219f3537b">
+								
+								    <div class="fields">
+								        <div class="field half">
+								            <label for="name">Name</label>
+								            <input type="text" name="name" id="name" required />
+								        </div>
+								        <div class="field half">
+								            <label for="email">Email</label>
+								            <input type="email" name="email" id="email" required />
+								        </div>
+								        <div class="field">
+								            <label for="message">Message</label>
+								            <textarea name="message" id="message" rows="4" required></textarea>
+								        </div>
+								    </div>
+								
+								    <ul class="actions">
+								        <li><button type="submit" class="primary">Send Message</button></li>
+								        <li><button type="reset">Reset</button></li>
+								    </ul>
+
+									<!-- Success / Error message -->
+								    <p id="formStatus" style="display:none; margin-top:15px; color:#4CAF50;">
+								        Message sent! I’ll get back to you soon. 💌
+								    </p>
+								
 								</form>
+															
 								<ul class="icons">
-									<li><a href="https://pin.it/Fgj2jTxF2" class="icon brands fa-pinterest"><span class="label">Pinterest (ADHD)</span></a></li> <!-- UPDATED -->
-									<li><a href="https://pin.it/5tpxZHztf" class="icon brands fa-pinterest"><span class="label">Pinterest (Dogs)</span></a></li> <!-- UPDATED -->
-									<li><a href="mailto:digital.dag.studio@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li> <!-- UPDATED -->
+									<li><a href="https://pin.it/Fgj2jTxF2" class="icon brands fa-pinterest"><span class="label">Pinterest (ADHD)</span></a></li>
+									<li><a href="https://pin.it/5tpxZHztf" class="icon brands fa-pinterest"><span class="label">Pinterest (Dogs)</span></a></li>
+									<li><a href="mailto:digital.dag.studio@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</article>
+							
+							<script>
+							// Handle form submission
+							document.getElementById("contactForm").addEventListener("submit", async function(e) {
+								e.preventDefault();
+							
+								const form = e.target;
+								const formStatus = document.getElementById("formStatus");
+							
+								const formData = new FormData(form);
+							
+								const response = await fetch(form.action, {
+									method: "POST",
+									body: formData
+								});
+
+								// Success message
+								if (response.ok) {
+									formStatus.textContent = "Message sent! I’ll get back to you soon. 💌";
+									formStatus.style.display = "block";
+									form.reset();
+								} else {
+									formStatus.textContent = "Something went wrong. Please try again.";
+									formStatus.style.display = "block";
+								}
+
+								// Hide message after 4 seconds
+								setTimeout(() => formStatus.style.display = "none", 4000);
+							});
+
+							// Reset button clears the status message
+							document.getElementById("contactForm").addEventListener("reset", function() {
+								document.getElementById("formStatus").style.display = "none";
+							});
+							</script>
 
 						<!-- Elements (demo content; you can delete this whole article later if you don't need it)-->
 							<article id="elements">
@@ -367,7 +415,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Digital Dag Studio. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> <!-- UPDATED -->
+						<p class="copyright">&copy; Digital Dag Studio.></p> <!-- UPDATED -->
 					</footer>
 
 			</div>
@@ -384,6 +432,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
