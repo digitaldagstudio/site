@@ -192,11 +192,19 @@
 						
 						<!-- Single Post Viewer -->
 						<article id="post-viewer" style="display:none;">
-						    <h2 id="post-title" class="post-title"></h2>
-						    <img id="post-cover" src="" alt="" />
-						    <div id="post-content"></div>
-						    <br>
-						    <a href="#blog" class="button">← Back to Blog</a>
+						  <div class="post-layout">
+						    <aside class="post-cover-col">
+						      <img id="post-cover" src="" alt="" />
+						    </aside>
+						
+						    <div class="post-body">
+						      <h2 id="post-title" class="post-title"></h2>
+						      <div id="post-content"></div>
+						    </div>
+						  </div>
+						
+						  <br>
+						  <a href="#blog" class="button">← Back to Blog</a>
 						</article>
 							
 						<!-- Elements (demo content; you can delete this whole article later if you don't need it)-->
@@ -514,6 +522,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
+
 
 
 
