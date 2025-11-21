@@ -1747,7 +1747,7 @@ h2.major {
 
 /* Sticky left column */
 .post-cover-col {
-  flex: 0 0 300px;
+  flex: 0 0 250px;
   position: sticky;
   top: 3rem;
 }
@@ -1777,4 +1777,5 @@ h2.major {
     max-width: 260px;
   }
 }
+
 
