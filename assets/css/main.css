@@ -1720,8 +1720,8 @@ h2.major {
 }
 
 .blog-cover-thumb {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
@@ -1738,12 +1738,31 @@ h2.major {
   opacity: 0.7;
 }
 
-/* Tiny thumbnail for cover inside the blog post viewer */
+/* Floating cover image on blog post viewer */
+#post-viewer {
+  position: relative;
+}
+
+/* Desktop: float image to the right of the article */
 #post-cover {
-  width: 64px;          /* tiny */
-  height: 64px;         /* tiny square */
+  width: 140px;
+  height: 140px;
   object-fit: cover;
-  border-radius: 6px;
-  display: block;
-  margin: 0 auto 1rem auto; /* centered */
+  border-radius: 8px;
+
+  position: absolute;
+  top: 0.5rem;
+  right: -180px;       /* pushes it just outside the content column */
+  opacity: 0.95;
+}
+
+/* Mobile + smaller screens: bring image back into the flow */
+@media (max-width: 1100px) {
+  #post-cover {
+    position: static;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
 }
