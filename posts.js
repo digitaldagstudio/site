@@ -2,7 +2,7 @@ const posts = [
   {
     id: 1,
     title: "The ADHD Morning Routine That Actually Works (Low-Energy Edition)",
-    date: "2025-02-20",
+    date: "11/20/2025",
     content: `
       <p>Because some mornings just… require less.
       
@@ -70,4 +70,5 @@ const posts = [
     cover: "images/post1.jpg"
   }
 ];
+
 
