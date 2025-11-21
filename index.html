@@ -188,19 +188,16 @@
 						<!-- Blog -->
 						<article id="blog">
 						    <h2 class="major">Blog</h2>
+						    <div id="blog-list"></div>
+						</article>
 						
-						    <span class="image main"><img src="images/blog-cover.jpg" alt="Blog cover image" /></span>
-						
-						    <p>Welcome to the Digital Dag Studio blog — where I share cozy ADHD-friendly routines, nature walk guides for anxious pups, and gentle reflections on slow living.</p>
-						
-						    <h3>Latest Posts</h3>
-						    <ul>
-						        <li><a href="#post1">5-Step Morning Routine for Low-Energy Days</a></li>
-						        <li><a href="#post2">Nature Walk Rituals for Anxious Dogs</a></li>
-						        <li><a href="#post3">How to Start a Calm Planning Habit</a></li>
-						    </ul>
-						
-						    <p>More posts coming soon.</p>
+						<!-- Single Post Viewer -->
+						<article id="post-viewer" style="display:none;">
+						    <h2 id="post-title" class="major"></h2>
+						    <span class="image main"><img id="post-cover" src="" alt="" /></span>
+						    <div id="post-content"></div>
+						    <br>
+						    <a href="#blog" class="button">← Back to Blog</a>
 						</article>
 							
 						<!-- Elements (demo content; you can delete this whole article later if you don't need it)-->
@@ -463,9 +460,55 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<script src="posts.js"></script>
 
+
+	<!-- Blog Logic to Main JS -->
+	<script>
+	document.addEventListener("DOMContentLoaded", () => {
+	  const blogList = document.getElementById("blog-list");
+	  const postViewer = document.getElementById("post-viewer");
+	  const postTitle = document.getElementById("post-title");
+	  const postCover = document.getElementById("post-cover");
+	  const postContent = document.getElementById("post-content");
+	
+	  function renderBlogList() {
+	    blogList.innerHTML = posts.map(post => `
+	      <div class="blog-item">
+	        <a href="#post-viewer" onclick="viewPost(${post.id})">
+	          <h3>${post.title}</h3>
+	          <p class="date">${post.date}</p>
+	        </a>
+	      </div>
+	    `).join("");
+	  }
+	
+	  window.viewPost = function(id) {
+	    const post = posts.find(p => p.id === id);
+	    if (!post) return;
+	
+	    postTitle.innerHTML = post.title;
+	    postCover.src = post.cover;
+	    postContent.innerHTML = post.content;
+	
+	    document.getElementById("blog").style.display = "none";
+	    postViewer.style.display = "block";
+	  };
+	
+	  // When navigating back
+	  window.addEventListener("hashchange", () => {
+	    if (location.hash === "#blog") {
+	      postViewer.style.display = "none";
+	      document.getElementById("blog").style.display = "block";
+	    }
+	  });
+	
+	  renderBlogList();
+	});
+	</script>
 	</body>
 </html>
+
 
 
 
