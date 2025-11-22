@@ -187,7 +187,8 @@
 						<!-- Blog -->
 						<article id="blog">
 						    <h2 class="major">Blog</h2>
-						    <div id="blog-list"></div>
+						    <!-- Grid of thumbnail cards -->
+						    <div id="blog-list" class="posts-grid"></div>
 						</article>
 						
 						<!-- Single Post Viewer -->
@@ -486,33 +487,41 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	    // Use the global posts array from posts.js
 	    const posts = window.posts || [];
 	
-	    console.log("posts =", posts);
-	    console.log("blogList =", blogList);
-	
 	    if (!blogList || !Array.isArray(posts) || posts.length === 0) {
 	      console.error("Blog init failed: blogList missing or posts is empty.");
 	      return;
 	    }
 	
-	    // Render the list of posts inside the Blog article
+	    // Render the posts as thumbnail cards
 	    function renderBlogList() {
 	      blogList.innerHTML = "";
 	
 	      posts.forEach((post, index) => {
-	        const item = document.createElement("div");
-	        item.style.color = "#ffffff";
-	        item.style.marginBottom = "1rem";
-	        item.style.cursor = "pointer";
+	        const card = document.createElement("article");
+	        card.className = "post-card";
 	
-	        item.textContent = (index + 1) + ". " + post.title;
+	        card.innerHTML = `
+	          <button class="post-card-inner" type="button" data-id="${post.id}">
+	            <img src="${post.cover}" alt="${post.title}">
+	            <div class="post-card-meta">
+	              <span class="post-card-number">${index + 1}</span>
+	              <h3 class="post-card-title">${post.title}</h3>
+	            </div>
+	          </button>
+	        `;
 	
-	        item.addEventListener("click", function () {
-	          viewPost(post.id);
-	        });
-	
-	        blogList.appendChild(item);
+	        blogList.appendChild(card);
 	      });
 	    }
+	
+	    // Click handling for all cards (event delegation)
+	    blogList.addEventListener("click", function (e) {
+	      const button = e.target.closest(".post-card-inner");
+	      if (!button) return;
+	
+	      const id = Number(button.dataset.id);
+	      viewPost(id);
+	    });
 	
 	    // Show a single post – let Dimension handle the article switching
 	    window.viewPost = function (id) {
@@ -522,12 +531,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        return;
 	      }
 	
-	      postTitle.textContent   = post.title;
-	      postCover.src           = post.cover;
-	      postCover.alt           = post.title;
-	      postContent.innerHTML   = post.content;
+	      postTitle.textContent = post.title;
+	      postCover.src         = post.cover;
+	      postCover.alt         = post.title;
+	      postContent.innerHTML = post.content;
 	
-	      // 🔑 This makes Dimension open the post-viewer article
+	      // Open the post-viewer article
 	      location.hash = "#post-viewer";
 	    };
 	
@@ -537,3 +546,4 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
+
