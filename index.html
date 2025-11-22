@@ -492,20 +492,23 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	      return;
 	    }
 	
-	    // Render the posts as thumbnail cards
+	    // Render the posts as thumbnail cards that match your CSS (.blog-card)
 	    function renderBlogList() {
 	      blogList.innerHTML = "";
 	
 	      posts.forEach((post, index) => {
 	        const card = document.createElement("article");
-	        card.className = "post-card";
+	        card.className = "blog-card";
 	
 	        card.innerHTML = `
-	          <button class="post-card-inner" type="button" data-id="${post.id}">
-	            <img src="${post.cover}" alt="${post.title}">
-	            <div class="post-card-meta">
-	              <span class="post-card-number">${index + 1}</span>
-	              <h3 class="post-card-title">${post.title}</h3>
+	          <button type="button" class="blog-card-inner" data-id="${post.id}">
+	            <div class="blog-card-cover">
+	              <img src="${post.cover}" alt="${post.title}">
+	            </div>
+	            <div class="blog-card-footer">
+	              <span class="blog-card-step">${index + 1}</span>
+	              <h3 class="blog-card-title">${post.title}</h3>
+	              ${post.date ? `<p class="blog-card-date">${post.date}</p>` : ""}
 	            </div>
 	          </button>
 	        `;
@@ -514,9 +517,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	      });
 	    }
 	
-	    // Click handling for all cards (event delegation)
+	    // Handle clicks on any card
 	    blogList.addEventListener("click", function (e) {
-	      const button = e.target.closest(".post-card-inner");
+	      const button = e.target.closest(".blog-card-inner");
 	      if (!button) return;
 	
 	      const id = Number(button.dataset.id);
@@ -546,4 +549,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
+
 
