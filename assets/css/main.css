@@ -1756,29 +1756,36 @@ h2.major {
 
 /* Blog card */
 .blog-card {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.12);
   border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.4);
   overflow: hidden;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-4px);
-  opacity: 0.9;
+  opacity: 0.95;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.45);
 }
 
-/* Inner link wrapper */
+/* Inner button wrapper */
 .blog-card-inner {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
 }
 
 /* Cover image area */
 .blog-card-cover img {
   width: 100%;
-  height: 140px;
+  height: 160px;
   object-fit: cover;
   display: block;
 }
@@ -1789,9 +1796,9 @@ h2.major {
 }
 
 .blog-card-step {
-  background: rgba(255,255,255,0.12);
-  padding: 4px 8px;
-  border-radius: 4px;
+  background: rgba(255,255,255,0.16);
+  padding: 4px 10px;
+  border-radius: 999px;
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
   display: inline-block;
@@ -1809,30 +1816,15 @@ h2.major {
   margin: 0;
 }
 
-/* === BLOG VISIBILITY FIX === */
-
-/* Make sure the blog article can scroll if content is taller */
+/* === BLOG VISIBILITY === */
 #blog {
-  max-height: 70vh;
-  overflow-y: auto;
+  max-height: 75vh;            /* let it be tall */
+  overflow-y: auto;            /* scroll if it gets too tall */
+  padding-bottom: 2.5rem;
 }
 
-/* Give the grid a bit of padding so content isn't glued to the title */
+/* Just to be extra sure it's visible */
 #blog-list {
-  margin-top: 1.5rem !important;
-  padding-top: 0.5rem;
+  visibility: visible;
+  opacity: 1;
 }
-
-/* Make each blog card pop off the background */
-.blog-card {
-  background: rgba(255,255,255,0.12) !important;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 8px;
-}
-
-/* Ensure cover image is fully visible (no accidental dimming) */
-.blog-card-cover img {
-  opacity: 1 !important;
-  display: block;
-}
-
