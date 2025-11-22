@@ -475,11 +475,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<!-- Posts data (same folder as index.html) -->
 	<script src="./posts.js"></script>
 	
-	<!-- Blog Logic (simple version to verify it works) -->
+	<!-- Blog Logic -->
 	<script>
 	  (function () {
 	    const blogList    = document.getElementById("blog-list");
-	    const postViewer  = document.getElementById("post-viewer");
 	    const postTitle   = document.getElementById("post-title");
 	    const postCover   = document.getElementById("post-cover");
 	    const postContent = document.getElementById("post-content");
@@ -490,15 +489,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	    console.log("posts =", posts);
 	    console.log("blogList =", blogList);
 	
-	    // If something is wrong, bail early
 	    if (!blogList || !Array.isArray(posts) || posts.length === 0) {
 	      console.error("Blog init failed: blogList missing or posts is empty.");
 	      return;
 	    }
 	
-	    // 🔹 Super simple render: just show titles as white text
+	    // Render the list of posts inside the Blog article
 	    function renderBlogList() {
-	      blogList.innerHTML = ""; // clear
+	      blogList.innerHTML = "";
 	
 	      posts.forEach((post, index) => {
 	        const item = document.createElement("div");
@@ -516,27 +514,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	      });
 	    }
 	
-	    // Show a single post
+	    // Show a single post – let Dimension handle the article switching
 	    window.viewPost = function (id) {
 	      const post = posts.find(p => p.id === id);
-	      if (!post) return;
-	
-	      postTitle.innerHTML   = post.title;
-	      postCover.src         = post.cover;
-	      postContent.innerHTML = post.content;
-	
-	      // Hide list, show viewer
-	      document.getElementById("blog").style.display = "none";
-	      postViewer.style.display = "block";
-	    };
-	
-	    // Handle going back to the list
-	    window.addEventListener("hashchange", () => {
-	      if (location.hash === "#blog") {
-	        postViewer.style.display = "none";
-	        document.getElementById("blog").style.display = "block";
+	      if (!post) {
+	        console.error("Post not found for id:", id);
+	        return;
 	      }
-	    });
+	
+	      postTitle.textContent   = post.title;
+	      postCover.src           = post.cover;
+	      postCover.alt           = post.title;
+	      postContent.innerHTML   = post.content;
+	
+	      // 🔑 This makes Dimension open the post-viewer article
+	      location.hash = "#post-viewer";
+	    };
 	
 	    // Initial render
 	    renderBlogList();
@@ -544,31 +537,3 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
