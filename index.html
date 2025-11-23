@@ -474,42 +474,49 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<script src="assets/js/main.js"></script>
 	
 	<!-- Posts data (same folder as index.html) -->
-	<script src="./posts.js"></script>
+	<script src="/posts.js"></script>
 	
 	<!-- Blog Logic -->
 	<script>
 	  (function () {
 	    function initBlog() {
+	      console.log("[Blog] initBlog running");
+	
 	      const blogList    = document.getElementById("blog-list");
 	      const postTitle   = document.getElementById("post-title");
 	      const postCover   = document.getElementById("post-cover");
 	      const postContent = document.getElementById("post-content");
 	
 	      if (!blogList) {
-	        console.error("Blog init failed: #blog-list not found.");
+	        console.error("[Blog] #blog-list not found");
 	        return;
 	      }
 	
-	      // Pull posts from posts.js
-	      let postsData;
+	      // --- Get posts from posts.js, whether defined as `const posts` or `window.posts` ---
+	      let postsData = undefined;
+	
 	      try {
-	        postsData = window.posts;  // posts is defined in posts.js
+	        if (Array.isArray(window.posts)) {
+	          postsData = window.posts;
+	        } else if (typeof posts !== "undefined" && Array.isArray(posts)) {
+	          // handles `const posts = [...]`
+	          postsData = posts;
+	        }
 	      } catch (e) {
-	        console.error("posts is not defined. Is posts.js loading correctly?", e);
-	        blogList.innerHTML = "<p>Blog posts coming soon.</p>";
-	        return;
+	        console.error("[Blog] Error while reading posts:", e);
 	      }
+	
+	      console.log("[Blog] postsData =", postsData);
 	
 	      if (!Array.isArray(postsData) || postsData.length === 0) {
 	        blogList.innerHTML = "<p>Blog posts coming soon.</p>";
-	        console.warn("No posts to render.");
+	        console.warn("[Blog] No posts to render.");
 	        return;
 	      }
 	
-	      // Render the grid of blog cards
+	      // --- Render the grid of cards ---
 	      function renderBlogList() {
 	        blogList.innerHTML = "";
-	
 	        postsData.forEach((post, index) => {
 	          const article = document.createElement("article");
 	          article.className = "blog-card";
@@ -533,9 +540,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	
 	          blogList.appendChild(article);
 	        });
+	
+	        console.log("[Blog] Rendered cards:", blogList.children.length);
 	      }
 	
-	      // Click → show full post in the post-viewer article
+	      // --- Click → open full post view ---
 	      blogList.addEventListener("click", function (e) {
 	        const btn = e.target.closest(".blog-card-inner");
 	        if (!btn) return;
@@ -544,7 +553,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        const post = postsData.find(p => p.id === id);
 	
 	        if (!post) {
-	          console.error("Post not found for id:", id);
+	          console.error("[Blog] Post not found for id:", id);
 	          return;
 	        }
 	
@@ -553,11 +562,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        postCover.alt         = post.title || "";
 	        postContent.innerHTML = post.content || "";
 	
-	        // Let Dimension's JS open the post-viewer panel
+	        // Open the post-viewer panel (Dimension handles the animation)
 	        location.hash = "#post-viewer";
 	      });
 	
-	      // Initial render into the BLOG panel
+	      // Initial render
 	      renderBlogList();
 	    }
 	
@@ -571,6 +580,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
+
 
 
 
