@@ -69,6 +69,84 @@ window.posts = [
     `,
     cover: "images/post1.jpg"
   }
+    {
+    id: 2,
+    title: "Dog Hiking Essentials You Actually Need (Beginner-Friendly Guide)",
+    date: "11/22/2025",
+    content: `
+      <p>Everything you need to feel prepared, confident, and safe on the trail with your dog — without overpacking.</p>
+  
+      <p>Hiking with your dog is one of the easiest ways to turn an ordinary day into an adventure. Fresh air, new smells, bonding time… what’s not to love? But the trail can also be unpredictable, and having the right essentials can make the difference between a calm, safe outing and a stressful scramble.</p>
+      
+      <p>If you're new to dog hiking (or want a simplified, ADHD-friendly packing system), this guide breaks down everything you actually need — no fluff, no overwhelm. These are the exact items I pack for my own hikes, along with Amazon finds that make adventuring with a dog easier.</p>
+  
+      <h3>1. A Comfortable, Secure Harness</h3>
+      <p>Your dog’s hiking harness is the foundation of your whole setup. Look for:</p>
+      <ul> 
+        <li>A front-clip option for more control</li>
+        <li>Padding around the chest</li>
+        <li>Predictability</li>
+        <li>A back handle (great for helping your dog over logs or rocks)</li>
+       </ul>
+      <p>A good harness prevents pulling, distributes pressure safely, and helps your dog stay focused in exciting environments.</p>
+       
+      <h3>2. Get Dressed First (No Decisions Required)</h3>
+      <p>Decision fatigue hits hard in the morning. The trick? Remove decisions entirely.</p>
+      <ul>
+        <li>Put on your pre-picked outfit</li>
+        <li>Use your “default uniform” if choosing feels impossible</li>
+        <li>Yesterday’s clean sweatshirt absolutely counts</li>
+      </ul>
+      <p>Getting dressed early builds momentum and signals your brain that the day has started.</p>
+  
+      <h3>3. The 2-Minute Bathroom Routine</h3>
+      <ul>
+        <li>Brush teeth</li>
+        <li>Splash your face or use a face wipe</li>
+        <li>Apply deodorant</li>
+      </ul>
+      <p>Just the basics — nothing overwhelming. Anything more is bonus points.</p>
+  
+      <h3>4. Meds + Hydration</h3>
+      <p>For ADHD brains, “out of sight, out of mind” is real. Place your meds where you can't ignore them — next to your toothbrush, on the counter, or by your water bottle. Pair it with another sip of water to help your brain fully wake up.</p>
+  
+      <h3>5. A 30-Second Breakfast</h3>
+      <p>Breakfast doesn’t need to be complicated. Choose something fast and easy:</p>
+      <ul>
+        <li>Toast</li>
+        <li>Banana</li>
+        <li>Protein bar</li>
+        <li>Yogurt pouch</li>
+        <li>Instant oatmeal</li>
+      </ul>
+  
+      <h3>6. A Tiny Dopamine Hit</h3>
+      <p>ADHD brains need a dopamine boost in the morning. Try one of these:</p>
+      <ul>
+        <li>Play a favorite song</li>
+        <li>Wear a cute accessory</li>
+        <li>Do a quick stretch</li>
+        <li>Pet your emotional support animal</li>
+      </ul>
+  
+      <h3>Why This Routine Works</h3>
+      <p>This routine is built on:</p>
+      <ul>
+        <li>Low-friction tasks</li>
+        <li>Minimal decisions</li>
+        <li>Predictability</li>
+        <li>Quick wins to build momentum</li>
+        <li>Micro-rewards that boost motivation</li>
+      </ul>
+  
+      <p>Instead of fighting your brain, this routine works with it — making your mornings smoother, calmer, and more achievable.</p>
+  
+      <h3>Final Thoughts</h3>
+      <p>You’re not lazy or bad at mornings. Your brain just works differently. This routine helps you start your day gently and successfully — even on low-energy days.</p>
+    `,
+    cover: "images/post2.jpg"
+  }
 ];
+
 
 
