@@ -476,95 +476,105 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<!-- Posts data (same folder as index.html) -->
 	<script src="./posts.js"></script>
 	
-	<!-- Blog Logic -->
-	<script>
-	  document.addEventListener("DOMContentLoaded", function () {
-	    const blogList    = document.getElementById("blog-list");
-	    const postTitle   = document.getElementById("post-title");
-	    const postCover   = document.getElementById("post-cover");
-	    const postContent = document.getElementById("post-content");
-	
-	    // 👇 Use the posts from posts.js directly
-	    let postsData;
-	    try {
-	      postsData = posts; // from posts.js
-	    } catch (e) {
-	      console.error("posts is not defined. Is posts.js loading correctly?", e);
-	      return;
-	    }
-	
-	    console.log("postsData length =", postsData.length);
-	    console.log("postsData =", postsData);
-	
-	    if (!blogList) {
-	      console.error("Blog init failed: #blog-list not found.");
-	      return;
-	    }
-	
-	    if (!Array.isArray(postsData) || postsData.length === 0) {
-	      blogList.innerHTML = "<p>Blog posts coming soon.</p>";
-	      console.warn("No posts to render.");
-	      return;
-	    }
-	
-	    // 🔹 Build one card per post
-	    function renderBlogList() {
-	      blogList.innerHTML = "";
-	
-	      postsData.forEach((post, index) => {
-	        const article = document.createElement("article");
-	        article.className = "blog-card";
-	
-	        const imgSrc = post.cover || "images/pic01.jpg";
-	        const title  = post.title || "Untitled Post";
-	        const date   = post.date || "";
-	
-	        article.innerHTML = `
-	          <button type="button" class="blog-card-inner" data-id="${post.id}">
-	            <div class="blog-card-cover">
-	              <img src="${imgSrc}" alt="${title.replace(/"/g, "&quot;")}">
-	            </div>
-	            <div class="blog-card-footer">
-	              <span class="blog-card-step">${index + 1}</span>
-	              <h3 class="blog-card-title">${title}</h3>
-	              ${date ? `<p class="blog-card-date">${date}</p>` : ""}
-	            </div>
-	          </button>
-	        `;
-	
-	        blogList.appendChild(article);
-	      });
-	
-	      console.log("Rendered blog cards:", blogList.children.length);
-	    }
-	
-	    // 🔹 Click → open full post view
-	    blogList.addEventListener("click", function (e) {
-	      const btn = e.target.closest(".blog-card-inner");
-	      if (!btn) return;
-	
-	      const id = Number(btn.dataset.id);
-	      const post = postsData.find(p => p.id === id);
-	
-	      if (!post) {
-	        console.error("Post not found for id:", id);
-	        return;
-	      }
-	
-	      postTitle.textContent = post.title || "";
-	      postCover.src         = post.cover || "";
-	      postCover.alt         = post.title || "";
-	      postContent.innerHTML = post.content || "";
-	
-	      location.hash = "#post-viewer";
-	    });
-	
-	    // Initial render
-	    renderBlogList();
-	  });
-	</script>
+<!-- Blog Logic -->
+<script>
+(function () {
+  function initBlog() {
+    const blogList    = document.getElementById("blog-list");
+    const postTitle   = document.getElementById("post-title");
+    const postCover   = document.getElementById("post-cover");
+    const postContent = document.getElementById("post-content");
+
+    // Use posts from posts.js
+    let postsData;
+    try {
+      postsData = posts; // from posts.js
+    } catch (e) {
+      console.error("posts is not defined. Is posts.js loading correctly?", e);
+      return;
+    }
+
+    console.log("postsData length =", postsData.length);
+    console.log("postsData =", postsData);
+
+    if (!blogList) {
+      console.error("Blog init failed: #blog-list not found.");
+      return;
+    }
+
+    if (!Array.isArray(postsData) || postsData.length === 0) {
+      blogList.innerHTML = "<p>Blog posts coming soon.</p>";
+      console.warn("No posts to render.");
+      return;
+    }
+
+    // Build one card per post
+    function renderBlogList() {
+      blogList.innerHTML = "";
+
+      postsData.forEach((post, index) => {
+        const article = document.createElement("article");
+        article.className = "blog-card";
+
+        const imgSrc = post.cover || "images/pic01.jpg";
+        const title  = post.title || "Untitled Post";
+        const date   = post.date || "";
+
+        article.innerHTML = `
+          <button type="button" class="blog-card-inner" data-id="${post.id}">
+            <div class="blog-card-cover">
+              <img src="${imgSrc}" alt="${title.replace(/"/g, "&quot;")}">
+            </div>
+            <div class="blog-card-footer">
+              <span class="blog-card-step">${index + 1}</span>
+              <h3 class="blog-card-title">${title}</h3>
+              ${date ? `<p class="blog-card-date">${date}</p>` : ""}
+            </div>
+          </button>
+        `;
+
+        blogList.appendChild(article);
+      });
+
+      console.log("Rendered blog cards:", blogList.children.length);
+    }
+
+    // Click → open full post view
+    blogList.addEventListener("click", function (e) {
+      const btn = e.target.closest(".blog-card-inner");
+      if (!btn) return;
+
+      const id = Number(btn.dataset.id);
+      const post = postsData.find(p => p.id === id);
+
+      if (!post) {
+        console.error("Post not found for id:", id);
+        return;
+      }
+
+      postTitle.textContent = post.title || "";
+      postCover.src         = post.cover || "";
+      postCover.alt         = post.title || "";
+      postContent.innerHTML = post.content || "";
+
+      location.hash = "#post-viewer";
+    });
+
+    // Initial render
+    renderBlogList();
+  }
+
+  // Run initBlog whether DOMContentLoaded has already fired or not
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBlog);
+  } else {
+    initBlog();
+  }
+})();
+</script>
 	</body>
 </html>
+
 
 
 
