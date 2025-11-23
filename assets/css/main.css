@@ -1750,42 +1750,64 @@ h2.major {
 
 
 /* -----------BLOG LIST----------------- */
-/* TEMPORARY DEBUGGING — simplify blog list */
-#blog-list * {
-  all: unset;
-  display: block;
-  color: white;
+
+/* Container for the blog list inside the Blog article */
+#blog .posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-#blog-list button {
-  border: 1px solid white !important;
-  padding: 1rem !important;
-  margin-bottom: 1rem !important;
-  cursor: pointer;
-}
-
-/* Simple blog list for debugging */
+/* Wrapper for each post item */
 .blog-item {
-  margin-bottom: 1rem;
-}
-
-.blog-item-btn {
   width: 100%;
+}
+
+/* Button that acts like a card row */
+.blog-item-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.25);
   text-align: left;
-  padding: 0.5rem 0;
-  border: none;
-  background: transparent;
-  color: inherit;
   cursor: pointer;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.blog-item-btn strong {
+/* Hover state */
+.blog-item-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Mini thumbnail image */
+.blog-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.35rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+/* Text column (title + date) */
+.blog-item-text {
+  flex: 1;
+}
+
+/* Title */
+.blog-item-title {
   display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
+/* Date */
 .blog-item-date {
-  font-size: 0.7rem;
-  opacity: 0.6;
+  font-size: 0.75rem;
+  opacity: 0.65;
 }
 
