@@ -1776,6 +1776,9 @@ h2.major {
   text-align: left;
   cursor: pointer;
   height: auto;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 /* Hover state */
@@ -1794,6 +1797,9 @@ h2.major {
   margin-bottom: 0.35rem;
   font-size: 0.9rem;
   line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0.05rem;
+  overflow-wrap: anywhere;
 }
 
 /* Date */
@@ -1813,4 +1819,5 @@ h2.major {
   flex-shrink: 0;
   opacity: 0.9;
 }
+
 
