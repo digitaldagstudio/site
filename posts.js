@@ -68,8 +68,7 @@ window.posts = [
       <p>You’re not lazy or bad at mornings. Your brain just works differently. This routine helps you start your day gently and successfully — even on low-energy days.</p>
     `,
     cover: "images/post1.jpg"
-  }
-    {
+    
     id: 2,
     title: "Dog Hiking Essentials You Actually Need (Beginner-Friendly Guide)",
     date: "11/22/2025",
@@ -147,6 +146,7 @@ window.posts = [
     cover: "images/post2.jpg"
   }
 ];
+
 
 
 
