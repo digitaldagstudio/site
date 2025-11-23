@@ -475,88 +475,92 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	
 	<!-- Posts data (same folder as index.html) -->
 	<script src="/site/posts.js"></script>
-	
+
 	<script>
-	  (function () {
-	    function initBlog() {
-	      const blogList    = document.getElementById("blog-list");
-	      const postTitle   = document.getElementById("post-title");
-	      const postCover   = document.getElementById("post-cover");
-	      const postContent = document.getElementById("post-content");
+	(function () {
+	  function initBlog() {
+	    const blogList    = document.getElementById("blog-list");
+	    const postTitle   = document.getElementById("post-title");
+	    const postCover   = document.getElementById("post-cover");
+	    const postContent = document.getElementById("post-content");
 	
-	      if (!blogList) {
-	        console.error("[Blog] #blog-list not found.");
-	        return;
-	      }
+	    if (!blogList) {
+	      console.error("[Blog] #blog-list not found.");
+	      return;
+	    }
 	
-	      // Pull posts from posts.js
-	      let postsData = window.posts;
-	      console.log("[Blog] postsData =", postsData);
+	    // Pull posts from posts.js
+	    let postsData = window.posts;
+	    console.log("[Blog] postsData =", postsData);
 	
-	      if (!Array.isArray(postsData) || postsData.length === 0) {
-	        blogList.innerHTML = "<p>Blog posts coming soon.</p>";
-	        console.warn("[Blog] No posts to render.");
-	        return;
-	      }
+	    if (!Array.isArray(postsData) || postsData.length === 0) {
+	      blogList.innerHTML = "<p>Blog posts coming soon.</p>";
+	      console.warn("[Blog] No posts to render.");
+	      return;
+	    }
 	
-	      // Very simple list: just titles as buttons
-	      function renderBlogList() {
-	        blogList.innerHTML = "";
+	    /* ---------------------------
+	       RENDER BLOG LIST
+	    ----------------------------*/
+	    function renderBlogList() {
+	      blogList.innerHTML = "";
 	
-	        postsData.forEach((post) => {
-	          const item = document.createElement("div");
-	          item.className = "blog-item";
+	      postsData.forEach((post) => {
+	        const date = post.date || "";
 	
-	          const title = post.title || "Untitled Post";
-	          const date  = post.date  || "";
+	        const wrapper = document.createElement("div");
+	        wrapper.className = "blog-row";
 	
-	          item.innerHTML = `
-	            <button type="button" class="blog-item-btn" data-id="${post.id}">
-	              <strong>${title}</strong>
-	              ${date ? `<div class="blog-item-date">${date}</div>` : ""}
-	            </button>
-	          `;
+	        wrapper.innerHTML = `
+	          <button type="button" class="blog-row-button" data-id="${post.id}">
+	            <span class="blog-row-title">${post.title}</span>
+	            ${date ? `<span class="blog-row-date">${date}</span>` : ""}
+	          </button>
+	        `;
 	
-	          blogList.appendChild(item);
-	        });
-	
-	        console.log("[Blog] Rendered items:", postsData.length);
-	      }
-	
-	      // Click → show full post in the post-viewer article
-	      blogList.addEventListener("click", function (e) {
-	        const btn = e.target.closest("button[data-id]");
-	        if (!btn) return;
-	
-	        const id   = Number(btn.dataset.id);
-	        const post = postsData.find(p => p.id === id);
-	
-	        if (!post) {
-	          console.error("[Blog] Post not found for id:", id);
-	          return;
-	        }
-	
-	        postTitle.textContent = post.title || "";
-	        postCover.src         = post.cover || "";
-	        postCover.alt         = post.title || "";
-	        postContent.innerHTML = post.content || "";
-	
-	        // Let Dimension's JS open the post-viewer panel
-	        location.hash = "#post-viewer";
+	        blogList.appendChild(wrapper);
 	      });
 	
-	      renderBlogList();
+	      console.log("[Blog] Rendered items:", postsData.length);
 	    }
 	
-	    if (document.readyState === "loading") {
-	      document.addEventListener("DOMContentLoaded", initBlog);
-	    } else {
-	      initBlog();
-	    }
-	  })();
+	    /* ---------------------------
+	       CLICK → OPEN FULL POST
+	    ----------------------------*/
+	    blogList.addEventListener("click", function (e) {
+	      const btn = e.target.closest("button[data-id]");
+	      if (!btn) return;
+	
+	      const id   = Number(btn.dataset.id);
+	      const post = postsData.find(p => p.id === id);
+	
+	      if (!post) {
+	        console.error("[Blog] Post not found for id:", id);
+	        return;
+	      }
+	
+	      postTitle.textContent = post.title || "";
+	      postCover.src         = post.cover || "";
+	      postCover.alt         = post.title || "";
+	      postContent.innerHTML = post.content || "";
+	
+	      location.hash = "#post-viewer";
+	    });
+	
+	    // INITIAL RENDER
+	    renderBlogList();
+	  }
+	
+	  if (document.readyState === "loading") {
+	    document.addEventListener("DOMContentLoaded", initBlog);
+	  } else {
+	    initBlog();
+	  }
+	})();
 	</script>
 	</body>
 </html>
+
 
 
 
