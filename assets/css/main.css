@@ -1788,3 +1788,39 @@ h2.major {
   font-size: 0.7rem;
   opacity: 0.6;
 }
+
+/* === SIMPLE BLOG LIST FOR DEBUGGING === */
+
+#blog {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+#blog-list {
+  display: block !important;
+  padding: 1rem 0;
+}
+
+.blog-card {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #fff;
+  background: rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.blog-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.blog-card-date {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
