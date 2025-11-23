@@ -1,11 +1,11 @@
-const posts = [
+window.posts = [
   {
     id: 1,
     title: "The ADHD Morning Routine That Actually Works (Low-Energy Edition)",
     date: "11/20/2025",
     content: `
-      <p>Because some mornings just… require less.
-      
+      <p>Because some mornings just… require less.</p>
+
       <p>If you’re someone with ADHD, mornings can feel like a boss battle you didn’t sign up for. Executive dysfunction, decision fatigue, and low energy can all stack up before you’ve even opened your eyes. But the truth is: your mornings don’t have to be chaotic or draining. With a simple, predictable routine, you can set up your day in a way that feels effortless and supportive — especially on low-energy days.</p>
       
       <p>This ADHD-friendly morning routine is designed to be gentle, realistic, and easy to follow, even when motivation is nowhere to be found. No complicated habits. No long checklists. Just small, doable actions that wake up your brain and body without overwhelming you.</p>
@@ -70,7 +70,3 @@ const posts = [
     cover: "images/post1.jpg"
   }
 ];
-
-
-
-
