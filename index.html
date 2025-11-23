@@ -500,28 +500,32 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	      }
 	
 	      // Very simple list: just titles as buttons
-	      function renderBlogList() {
-	        blogList.innerHTML = "";
-	
-	        postsData.forEach((post) => {
-	          const item = document.createElement("div");
-	          item.className = "blog-item";
-	
-	          const title = post.title || "Untitled Post";
-	          const date  = post.date  || "";
-	
-	          item.innerHTML = `
-	            <button type="button" class="blog-item-btn" data-id="${post.id}">
-	              <strong>${title}</strong>
-	              ${date ? `<div class="blog-item-date">${date}</div>` : ""}
-	            </button>
-	          `;
-	
-	          blogList.appendChild(item);
-	        });
-	
-	        console.log("[Blog] Rendered items:", postsData.length);
-	      }
+			function renderBlogList() {
+			  blogList.innerHTML = "";
+			
+			  postsData.forEach((post) => {
+				const item = document.createElement("div");
+				item.className = "blog-item";
+			
+				const title = post.title || "Untitled Post";
+				const date  = post.date  || "";
+				const cover = post.cover || "";
+			
+				item.innerHTML = `
+				  <button type="button" class="blog-item-btn" data-id="${post.id}">
+					${cover ? `<img src="${cover}" alt="${title} cover" class="blog-thumb">` : ""}
+					<div class="blog-item-text">
+					  <strong class="blog-item-title">${title}</strong>
+					  ${date ? `<div class="blog-item-date">${date}</div>` : ""}
+					</div>
+				  </button>
+				`;
+			
+				blogList.appendChild(item);
+			  });
+			
+			  console.log("[Blog] Rendered items:", postsData.length);
+			}
 	
 	      // Click → show full post in the post-viewer article
 	      blogList.addEventListener("click", function (e) {
@@ -557,6 +561,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
+
 
 
 
