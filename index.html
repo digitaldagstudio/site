@@ -476,36 +476,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<!-- Posts data (same folder as index.html) -->
 	<script src="/site/posts.js"></script>
 	
-	<!-- Blog Logic -->
 	<script>
 	  (function () {
 	    function initBlog() {
-	      console.log("[Blog] initBlog running");
-	
 	      const blogList    = document.getElementById("blog-list");
 	      const postTitle   = document.getElementById("post-title");
 	      const postCover   = document.getElementById("post-cover");
 	      const postContent = document.getElementById("post-content");
 	
 	      if (!blogList) {
-	        console.error("[Blog] #blog-list not found");
+	        console.error("[Blog] #blog-list not found.");
 	        return;
 	      }
 	
-	      // --- Get posts from posts.js, whether defined as `const posts` or `window.posts` ---
-	      let postsData = undefined;
-	
-	      try {
-	        if (Array.isArray(window.posts)) {
-	          postsData = window.posts;
-	        } else if (typeof posts !== "undefined" && Array.isArray(posts)) {
-	          // handles `const posts = [...]`
-	          postsData = posts;
-	        }
-	      } catch (e) {
-	        console.error("[Blog] Error while reading posts:", e);
-	      }
-	
+	      // Pull posts from posts.js
+	      let postsData = window.posts;
 	      console.log("[Blog] postsData =", postsData);
 	
 	      if (!Array.isArray(postsData) || postsData.length === 0) {
@@ -514,33 +499,33 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        return;
 	      }
 	
-	      // --- Render the grid of cards ---
+	      // Very simple list: just titles as buttons
 	      function renderBlogList() {
 	        blogList.innerHTML = "";
-	        postsData.forEach((post, index) => {
-	          const article = document.createElement("article");
-	          article.className = "blog-card";
 	
-	          const imgSrc = post.cover || "images/pic01.jpg";
-	          const title  = post.title || "Untitled Post";
-	          const date   = post.date || "";
+	        postsData.forEach((post) => {
+	          const item = document.createElement("div");
+	          item.className = "blog-item";
 	
-				article.innerHTML = `
-				  <button data-id="${post.id}" style="width:100%;padding:1rem;border:1px solid #fff;">
-					<h3>${title}</h3>
-					<p>${date}</p>
-				  </button>
-				`;
+	          const title = post.title || "Untitled Post";
+	          const date  = post.date  || "";
 	
-	          blogList.appendChild(article);
+	          item.innerHTML = `
+	            <button type="button" class="blog-item-btn" data-id="${post.id}">
+	              <strong>${title}</strong>
+	              ${date ? `<div class="blog-item-date">${date}</div>` : ""}
+	            </button>
+	          `;
+	
+	          blogList.appendChild(item);
 	        });
 	
-	        console.log("[Blog] Rendered cards:", blogList.children.length);
+	        console.log("[Blog] Rendered items:", postsData.length);
 	      }
 	
-	      // --- Click → open full post view ---
+	      // Click → show full post in the post-viewer article
 	      blogList.addEventListener("click", function (e) {
-	        const btn = e.target.closest(".blog-card-inner");
+	        const btn = e.target.closest("button[data-id]");
 	        if (!btn) return;
 	
 	        const id   = Number(btn.dataset.id);
@@ -556,15 +541,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        postCover.alt         = post.title || "";
 	        postContent.innerHTML = post.content || "";
 	
-	        // Open the post-viewer panel (Dimension handles the animation)
+	        // Let Dimension's JS open the post-viewer panel
 	        location.hash = "#post-viewer";
 	      });
 	
-	      // Initial render
 	      renderBlogList();
 	    }
 	
-	    // Run initBlog whether DOMContentLoaded has already fired or not
 	    if (document.readyState === "loading") {
 	      document.addEventListener("DOMContentLoaded", initBlog);
 	    } else {
@@ -574,6 +557,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
+
 
 
 
