@@ -2,11 +2,18 @@
 
 function loadScript(src) {
   return new Promise((resolve, reject) => {
+    console.log("[Blog] Loading script:", src);
     const s = document.createElement("script");
     s.src = src;
     s.async = false; // keep order predictable
-    s.onload = resolve;
-    s.onerror = () => reject(new Error("Failed to load " + src));
+    s.onload = () => {
+      console.log("[Blog] Loaded:", src);
+      resolve();
+    };
+    s.onerror = () => {
+      console.error("[Blog] FAILED to load:", src);
+      reject(new Error("Failed to load " + src));
+    };
     document.head.appendChild(s);
   });
 }
@@ -23,6 +30,7 @@ function initBlog() {
   }
 
   let postsData = window.posts || [];
+  console.log("[Blog] window.posts at initBlog:", postsData);
 
   // Sort newest first (based on your MM/DD/YYYY dates)
   postsData = postsData.slice().sort((a, b) => {
@@ -31,8 +39,6 @@ function initBlog() {
     if (!isNaN(da) && !isNaN(db)) return db - da;
     return b.id - a.id;
   });
-
-  console.log("[Blog] postsData =", postsData);
 
   if (!Array.isArray(postsData) || postsData.length === 0) {
     blogList.innerHTML = "<p>Blog posts coming soon.</p>";
@@ -132,11 +138,13 @@ function initBlog() {
 window.addEventListener("DOMContentLoaded", async () => {
   window.allPosts = window.allPosts || [];
 
+  console.log("[Blog] postScriptFiles:", window.postScriptFiles);
+
   const files = window.postScriptFiles || [];
   try {
     await Promise.all(files.map(loadScript));
   } catch (err) {
-    console.error("[Blog] Failed to load post scripts:", err);
+    console.error("[Blog] Failed to load one or more post scripts:", err);
   }
 
   // Build window.posts from the collected post objects
