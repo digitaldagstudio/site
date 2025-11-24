@@ -97,7 +97,12 @@ window.posts = [
     <hr />
 
     <h2>2. Hands-Free Hiking Leash (Game-Changing)</h2>
-    <img src="PRODUCT_IMAGE_iYoShop" alt="iYoShop hands free leash" class="product-img" />
+    
+    <img 
+      src="https://m.media-amazon.com/images/I/81xU-Wwil0L._AC_SX425_.jpg" 
+      alt="iyoshop hands-free dog leash" 
+      class="product-img" 
+    />
     <h3>✔ Recommended: iYoShop Hands-Free Dog Leash with Zipper Pouch</h3>
     <p><a href="https://amzn.to/4a8moBR" target="_blank" rel="noopener noreferrer">https://amzn.to/4a8moBR</a></p>
 
@@ -299,6 +304,7 @@ window.posts = [
   cover: "images/adhd-weekend-reset.jpg"
 }
 ];
+
 
 
 
