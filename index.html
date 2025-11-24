@@ -490,15 +490,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	      }
 	
 	      // Pull posts from posts.js
-	      let postsData = window.posts;
-
-		 // sort newest first
-		  postsData = postsData.slice().sort((a, b) => {
-		    const da = new Date(a.date);
-		    const db = new Date(b.date);
-		    return db - da;
-		  });
-			
+	      let postsData = window.posts || [];
+	
+	      // Sort newest first (based on your MM/DD/YYYY dates)
+	      postsData = postsData.slice().sort((a, b) => {
+	        const da = new Date(a.date);
+	        const db = new Date(b.date);
+	        if (!isNaN(da) && !isNaN(db)) return db - da;
+	        return b.id - a.id;
+	      });
+	
 	      console.log("[Blog] postsData =", postsData);
 	
 	      if (!Array.isArray(postsData) || postsData.length === 0) {
@@ -507,44 +508,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        return;
 	      }
 	
-	      // Very simple list: just titles as buttons
-			function renderBlogList() {
-			  blogList.innerHTML = "";
-			
-			  postsData.forEach((post) => {
-				const item = document.createElement("div");
-				item.className = "blog-item";
-			
-				const title = post.title || "Untitled Post";
-				const date  = post.date  || "";
-				const cover = post.cover || "";
-			
-				item.innerHTML = `
-				  <button type="button" class="blog-item-btn" data-id="${post.id}">
-					${cover ? `<img src="${cover}" alt="${title} cover" class="blog-thumb">` : ""}
-					<div class="blog-item-text">
-					  <strong class="blog-item-title">${title}</strong>
-					  ${date ? `<div class="blog-item-date">${date}</div>` : ""}
-					</div>
-				  </button>
-				`;
-			
-				blogList.appendChild(item);
-			  });
-			
-			  console.log("[Blog] Rendered items:", postsData.length);
-			}
-	
-	      // Click → show full post in the post-viewer article
-	      blogList.addEventListener("click", function (e) {
-	        const btn = e.target.closest("button[data-id]");
-	        if (!btn) return;
-	
-	        const id   = Number(btn.dataset.id);
-	        const post = postsData.find(p => p.id === id);
-	
-	        if (!post) {
-	          console.error("[Blog] Post not found for id:", id);
+	      // Helper: show a single post in the viewer + update URL
+	      function showPost(post) {
+	        if (!postTitle || !postCover || !postContent) {
+	          console.error("[Blog] Post viewer elements missing.");
 	          return;
 	        }
 	
@@ -553,11 +520,88 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	        postCover.alt         = post.title || "";
 	        postContent.innerHTML = post.content || "";
 	
-	        // Let Dimension's JS open the post-viewer panel
-	        location.hash = "#post-viewer";
+	        // Update URL with ?post=ID (no reload)
+	        const url = new URL(window.location.href);
+	        url.searchParams.set("post", post.id);
+	        history.replaceState(null, "", url.toString());
+	
+	        // Open the post-viewer panel in Dimension
+	        window.location.hash = "#post-viewer";
+	      }
+	
+	      // Render blog list (cards/buttons)
+	      function renderBlogList() {
+	        blogList.innerHTML = "";
+	
+	        postsData.forEach((post) => {
+	          const item = document.createElement("div");
+	          item.className = "blog-item";
+	
+	          const title = post.title || "Untitled Post";
+	          const date  = post.date  || "";
+	          const cover = post.cover || "";
+	
+	          item.innerHTML = `
+	            <button type="button" class="blog-item-btn" data-id="${post.id}">
+	              ${cover ? `<img src="${cover}" alt="${title} cover" class="blog-thumb">` : ""}
+	              <div class="blog-item-text">
+	                <strong class="blog-item-title">${title}</strong>
+	                ${date ? `<div class="blog-item-date">${date}</div>` : ""}
+	              </div>
+	            </button>
+	          `;
+	
+	          blogList.appendChild(item);
+	        });
+	
+	        console.log("[Blog] Rendered items:", postsData.length);
+	      }
+	
+	      // Click → open post + update ?post=ID in URL
+	      blogList.addEventListener("click", function (e) {
+	        const btn = e.target.closest("button[data-id]");
+	        if (!btn) return;
+	
+	        const id   = Number(btn.dataset.id);
+	        const post = postsData.find((p) => p.id === id);
+	
+	        if (!post) {
+	          console.error("[Blog] Post not found for id:", id);
+	          return;
+	        }
+	
+	        showPost(post);
 	      });
 	
+	      // If URL already has ?post=ID, auto-open that post on load
+	      function openPostFromUrlIfNeeded() {
+	        const params = new URLSearchParams(window.location.search);
+	        const postParam = params.get("post");
+	        if (!postParam) return;
+	
+	        const id = Number(postParam);
+	        const post = postsData.find((p) => p.id === id);
+	        if (!post) {
+	          console.warn("[Blog] No post matched ?post=", postParam);
+	          return;
+	        }
+	
+	        showPost(post);
+	      }
+	
+	      // Optional: when clicking "Back to Blog", remove ?post from URL
+	      const backLink = document.querySelector("#post-viewer a.button");
+	      if (backLink) {
+	        backLink.addEventListener("click", function () {
+	          const url = new URL(window.location.href);
+	          url.searchParams.delete("post");
+	          history.replaceState(null, "", url.toString());
+	          // Hash change to #blog already handled by href="#blog"
+	        });
+	      }
+	
 	      renderBlogList();
+	      openPostFromUrlIfNeeded();
 	    }
 	
 	    if (document.readyState === "loading") {
@@ -569,6 +613,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</script>
 	</body>
 </html>
+
 
 
 
