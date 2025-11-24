@@ -75,194 +75,110 @@ window.posts = [
     title: "Dog Hiking Essentials You Actually Need (Beginner-Friendly Guide)",
     date: "11/22/2025",
     content: `
-        <h1>Dog Hiking Essentials You Actually Need (My Favorite Amazon Finds)</h1>
     <p><em>A simple, beginner-friendly guide to hiking with your dog — without overwhelm.</em></p>
+
+    <p><strong>Affiliate Disclosure:</strong> This post contains affiliate links. As an Amazon Associate, I earn from qualifying purchases — at no extra cost to you. Thank you for supporting my work and helping me create more helpful guides!</p>
 
     <p>Hiking with your dog is one of the best ways to slow down, ground yourself, and create meaningful memories outdoors. But the trail can also be unpredictable, and having the right gear makes the experience safer, calmer, and way more enjoyable for both you and your pup.</p>
 
     <p>This guide breaks down the exact <strong>dog hiking essentials</strong> I pack for every adventure — including my favorite Amazon finds that are durable, trail-tested, and perfect for beginners.</p>
 
-    <p>Let’s get into it. 🐾🌲</p>
-
     <hr />
 
     <h2>1. A Secure, Comfortable Harness</h2>
+    <img src="PRODUCT_IMAGE_rabbitgoo" alt="rabbitgoo no pull harness" class="product-img" />
     <h3>✔ Recommended: rabbitgoo No-Pull Dog Harness</h3>
     <p><a href="https://amzn.to/3LZP5XJ" target="_blank" rel="noopener noreferrer">https://amzn.to/3LZP5XJ</a></p>
-
-    <p>A reliable harness is the #1 must-have for hiking. This one has:</p>
-    <ul>
-      <li>Two leash clips (front + back)</li>
-      <li>A padded chest plate</li>
-      <li>Reflective material</li>
-      <li>An easy-grab handle for helping your dog over obstacles</li>
-    </ul>
-    <p>It prevents choking, helps reduce pulling, and keeps your dog safe on uneven terrain.</p>
 
     <hr />
 
     <h2>2. Hands-Free Hiking Leash (Game-Changing)</h2>
+    <img src="PRODUCT_IMAGE_iYoShop" alt="iYoShop hands free leash" class="product-img" />
     <h3>✔ Recommended: iYoShop Hands-Free Dog Leash with Zipper Pouch</h3>
     <p><a href="https://amzn.to/4a8moBR" target="_blank" rel="noopener noreferrer">https://amzn.to/4a8moBR</a></p>
-
-    <p>If you haven’t tried a waist leash yet, this will change your hiking life.</p>
-    <p>Benefits:</p>
-    <ul>
-      <li>Better posture</li>
-      <li>No shoulder pulling</li>
-      <li>Easier multitasking</li>
-      <li>Shock-absorbing bungee for sudden pulls</li>
-    </ul>
-    <p>Perfect for energetic pups and narrow trails.</p>
 
     <hr />
 
     <h2>3. Water Essentials: Bowl + Travel Bottle</h2>
-    <p>Dogs overheat and dehydrate much faster than humans — especially when there's elevation, excitement, or lots of sniffing. These two items make hydration super easy and lightweight:</p>
-
+    <img src="PRODUCT_IMAGE_PetBonusBowls" alt="PetBonus collapsible bowls" class="product-img" />
     <h3>✔ Collapsible Bowl: PetBonus 2-Pack Silicone Bowls</h3>
     <p><a href="https://amzn.to/3M2ORz4" target="_blank" rel="noopener noreferrer">https://amzn.to/3M2ORz4</a></p>
-    <p>Simple, foldable, durable, and easy to clip onto a bag. Use for longer breaks, snacks, or shared water stops.</p>
 
+    <img src="PRODUCT_IMAGE_SpringerBottle" alt="Springer dog water bottle" class="product-img" />
     <h3>✔ Travel Bottle: Springer Dog Water Bottle (22oz)</h3>
     <p><a href="https://amzn.to/3Kh8eDY" target="_blank" rel="noopener noreferrer">https://amzn.to/3Kh8eDY</a></p>
-    <p>Perfect for one-handed sipping on the trail. The water flows into a built-in cup and drains back in if unused — no waste, no spills, no fuss.</p>
-
-    <p>This combo covers both quick water breaks and longer rest stops.</p>
 
     <hr />
 
     <h2>4. A Lightweight Cooling Bandana</h2>
+    <img src="PRODUCT_IMAGE_WilderdogBandana" alt="Wilderdog cooling bandana" class="product-img" />
     <h3>✔ Recommended: Wilderdog Cooling Bandana (Pumpkin Spice Plaid)</h3>
     <p><a href="https://amzn.to/4pndZ1W" target="_blank" rel="noopener noreferrer">https://amzn.to/4pndZ1W</a></p>
-
-    <p>This breathable mesh bandana helps keep your dog cool on warm days. Just wet it, wring it, tie it on — instant cooling effect and adorable trail vibes.</p>
 
     <hr />
 
     <h2>5. Paw Protection (Essential for Rough or Hot Trails)</h2>
-    <p>Use either boots or balm depending on your dog’s preference.</p>
 
+    <img src="PRODUCT_IMAGE_MushersSecret" alt="Musher's Secret paw balm" class="product-img" />
     <h3>✔ Paw Balm: Musher’s Secret Dog Paw Wax</h3>
     <p><a href="https://amzn.to/4ihl9CH" target="_blank" rel="noopener noreferrer">https://amzn.to/4ihl9CH</a></p>
-    <p>Great for dogs who dislike boots. Creates a protective, all-natural barrier against heat, salt, rocks, ice, and dryness.</p>
 
+    <img src="PRODUCT_IMAGE_QUMYBoots" alt="QUMY dog boots" class="product-img" />
     <h3>✔ Boots: QUMY Dog Shoes</h3>
     <p><a href="https://amzn.to/43MMPJC" target="_blank" rel="noopener noreferrer">https://amzn.to/43MMPJC</a></p>
-    <p>Durable, water-resistant, and great for rocky terrain or hot pavement. If your dog tolerates boots, these are a reliable, budget-friendly option.</p>
 
     <hr />
 
     <h2>6. High-Value Trail Treats</h2>
+    <img src="PRODUCT_IMAGE_VitalEssentials" alt="Vital Essentials freeze dried beef liver treats" class="product-img" />
     <h3>✔ Recommended: Vital Essentials Freeze-Dried Beef Liver</h3>
     <p><a href="https://amzn.to/3XN7fi2" target="_blank" rel="noopener noreferrer">https://amzn.to/3XN7fi2</a></p>
-
-    <p>Perfect for:</p>
-    <ul>
-      <li>Recall</li>
-      <li>“Look at me”</li>
-      <li>Redirecting excitement</li>
-      <li>Rewarding calm walking</li>
-    </ul>
-    <p>Single-ingredient, high-value, grain-free — dogs obsess over these.</p>
 
     <hr />
 
     <h2>7. A Quick-Dry Trail Towel</h2>
+    <img src="PRODUCT_IMAGE_WiseOwlTowel" alt="Wise Owl microfiber towel" class="product-img" />
     <h3>✔ Recommended: Wise Owl Outfitters Microfiber Towel</h3>
     <p><a href="https://amzn.to/48wxJuj" target="_blank" rel="noopener noreferrer">https://amzn.to/48wxJuj</a></p>
 
-    <p>Use it to wipe paws, dry off post-creek dips, or clean mud and debris. It dries super fast and folds down small, which makes it ideal for hiking.</p>
-
     <hr />
 
-    <h2>8. Treat/Fanny Pack for Hands-Free Carrying</h2>
+    <h2>8. Treat/Fanny Pack</h2>
+    <img src="PRODUCT_IMAGE_WilderdogFannyPack" alt="Wilderdog utility fanny pack" class="product-img" />
     <h3>✔ Recommended: Wilderdog Utility Fanny Pack</h3>
     <p><a href="https://amzn.to/4oXibpp" target="_blank" rel="noopener noreferrer">https://amzn.to/4oXibpp</a></p>
 
-    <p>This pack has 3 pockets plus a built-in poop bag dispenser. It fits:</p>
-    <ul>
-      <li>Treats</li>
-      <li>Keys</li>
-      <li>Phone</li>
-      <li>Waste bags</li>
-      <li>Small toys</li>
-    </ul>
-    <p>A must-have if you like keeping things organized and accessible.</p>
-
     <hr />
 
-    <h2>9. Poop Bag Holder + Poop Bags</h2>
-    <h3>✔ Recommended: Soft Fabric Poop Bag Dispenser (Black)</h3>
+    <h2>9. Poop Bag Holder</h2>
+    <img src="PRODUCT_IMAGE_PoopBagHolder" alt="poop bag holder" class="product-img" />
+    <h3>✔ Recommended: Soft Fabric Poop Bag Dispenser</h3>
     <p><a href="https://amzn.to/4r8Ryzc" target="_blank" rel="noopener noreferrer">https://amzn.to/4r8Ryzc</a></p>
-
-    <p>Clips easily onto your leash or fanny pack. Always bring extras — many trails don’t offer trash cans until the end.</p>
 
     <hr />
 
     <h2>10. Trail Dog First Aid Kit</h2>
+    <img src="PRODUCT_IMAGE_TrailDogKit" alt="trail dog medical kit" class="product-img" />
     <h3>✔ Recommended: Adventure Medical Kits Trail Dog Medical Kit</h3>
     <p><a href="https://amzn.to/3XQwf80" target="_blank" rel="noopener noreferrer">https://amzn.to/3XQwf80</a></p>
 
-    <p>Includes:</p>
-    <ul>
-      <li>Bandages</li>
-      <li>Dressings</li>
-      <li>Tweezers</li>
-      <li>Tick tools</li>
-      <li>Antiseptics</li>
-      <li>Dog-specific injury instructions</li>
-    </ul>
-    <p>Essential for longer or remote hikes.</p>
-
     <hr />
 
-    <h2>11. Dog Backpack for Longer Adventures</h2>
-    <p>Great for helping your dog carry their own light gear (water, treats, poop bags).</p>
+    <h2>11. Dog Backpack Options</h2>
 
+    <img src="PRODUCT_IMAGE_RuffwearPack" alt="Ruffwear day pack" class="product-img" />
     <h3>✔ Day Pack: Ruffwear Front Range Dog Day Pack</h3>
     <p><a href="https://amzn.to/4oXWK7u" target="_blank" rel="noopener noreferrer">https://amzn.to/4oXWK7u</a></p>
 
+    <img src="PRODUCT_IMAGE_WilderdogPack" alt="Wilderdog backpack" class="product-img" />
     <h3>✔ Harness Backpack: Wilderdog Dog Backpack (Pacific Blue)</h3>
     <p><a href="https://amzn.to/4oggClo" target="_blank" rel="noopener noreferrer">https://amzn.to/4oggClo</a></p>
-    <p>Integrated harness, poop bag dispenser, and saddlebag pockets.</p>
-
-    <hr />
-
-    <h2>How I Pack for Easy, Stress-Free Hikes</h2>
-
-    <h3> My Backpack</h3>
-    <ul>
-      <li>Water + bowl</li>
-      <li>Trail towel</li>
-      <li>First aid kit</li>
-      <li>Extra poop bags</li>
-      <li>Backup leash</li>
-    </ul>
-
-    <h3> My Dog’s Gear</h3>
-    <ul>
-      <li>Harness</li>
-      <li>Hands-free leash</li>
-      <li>Springer bottle</li>
-      <li>Treats + bandana</li>
-      <li>Paw balm pre-hike</li>
-    </ul>
-
-    <h3>Car Essentials</h3>
-    <ul>
-      <li>Spare towel</li>
-      <li>Backup bowls</li>
-      <li>Extra water</li>
-      <li>Tick spray</li>
-      <li>Extra poop bags</li>
-    </ul>
 
     <hr />
 
     <h2>Final Thoughts</h2>
-    <p>You don’t need a ton of gear to hike with your dog — just the right combination of protective, comfortable, and easy-to-pack essentials. With this setup, you’ll feel confident on the trail, your pup will stay safe and happy, and every outing becomes a little peaceful escape from the busy world.</p>
-    `,
+    <p>You don’t need a ton of gear to hike with your dog — just the right combination of protective, comfortable, and easy-to-pack essentials. With this setup, you’ll feel confident on the trail, your pup will stay safe and happy, and every outing becomes a peaceful escape from the busy world.</p>
+  `,
     cover: "images/post2.jpg"
   },
   
@@ -379,6 +295,7 @@ window.posts = [
   cover: "images/adhd-weekend-reset.jpg"
 }
 ];
+
 
 
 
