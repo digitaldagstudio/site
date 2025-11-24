@@ -77,11 +77,11 @@ window.posts = [
     content: `
     <p><em>A simple, beginner-friendly guide to hiking with your dog — without overwhelm.</em></p>
 
-    <p><strong>Affiliate Disclosure:</strong> This post contains affiliate links. As an Amazon Associate, I earn from qualifying purchases — at no extra cost to you. Thank you for supporting my work and helping me create more helpful guides!</p>
-
     <p>Hiking with your dog is one of the best ways to slow down, ground yourself, and create meaningful memories outdoors. But the trail can also be unpredictable, and having the right gear makes the experience safer, calmer, and way more enjoyable for both you and your pup.</p>
 
     <p>This guide breaks down the exact <strong>dog hiking essentials</strong> I pack for every adventure — including my favorite Amazon finds that are durable, trail-tested, and perfect for beginners.</p>
+
+    <p><em>Affiliate Disclosure: This post contains affiliate links. As an Amazon Associate, I earn from qualifying purchases — at no extra cost to you. Thank you for supporting my work and helping me create more helpful guides!</em></p>
 
     <hr />
 
@@ -299,6 +299,7 @@ window.posts = [
   cover: "images/adhd-weekend-reset.jpg"
 }
 ];
+
 
 
 
