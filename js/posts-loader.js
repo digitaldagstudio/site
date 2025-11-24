@@ -121,7 +121,6 @@ function initBlog() {
       const url = new URL(window.location.href);
       url.searchParams.delete("post");
       history.replaceState(null, "", url.toString());
-      // hash navigation handled by href="#blog"
     });
   }
 
@@ -129,7 +128,7 @@ function initBlog() {
   openPostFromUrlIfNeeded();
 }
 
-// When the page is ready, load all post scripts, then init the blog
+// Load all post scripts, then init the blog
 window.addEventListener("DOMContentLoaded", async () => {
   window.allPosts = window.allPosts || [];
 
@@ -142,6 +141,9 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // Build window.posts from the collected post objects
   window.posts = (window.allPosts || []).slice();
+
+  console.log("[Blog] allPosts loaded =", window.allPosts);
+  console.log("[Blog] window.posts =", window.posts);
 
   initBlog();
 });
