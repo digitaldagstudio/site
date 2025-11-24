@@ -137,8 +137,8 @@ window.posts = [
   },
   
   {
-    id: 2,
-    title: "Dog Hiking Essentials You Actually Need (Beginner-Friendly Guide)",
+    id: 3,
+    title: "ADHD Weekend Reset",
     date: "11/22/2025",
     content: `
      <p>If weekends leave you feeling overwhelmed, behind, or unsure where to start, you’re not alone. For ADHD brains, two days “off” don’t always mean rest. Sometimes they turn into a blur of intentions, unfinished chores, and guilt about everything you didn’t get done.</p>
@@ -249,5 +249,6 @@ window.posts = [
   cover: "images/ADHD Weekend Reset.jpg"
 }
 ];
+
 
 
