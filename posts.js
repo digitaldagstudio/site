@@ -87,7 +87,7 @@ window.posts = [
 
     <h2>1. A Secure, Comfortable Harness</h2>
     <img 
-      src="https://m.media-amazon.com/images/I/61nulRE8B0L._AC_SL1500_.jpg" 
+      src="https://m.media-amazon.com/images/I/71MV2mUhy0L._AC_SL1500_.jpg" 
       alt="rabbitgoo no pull harness" 
       class="product-img" 
     />
@@ -304,6 +304,7 @@ window.posts = [
   cover: "images/adhd-weekend-reset.jpg"
 }
 ];
+
 
 
 
