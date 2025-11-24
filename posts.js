@@ -88,14 +88,14 @@ window.posts = [
     <hr />
 
     <h2>1. A Secure, Comfortable Harness</h2>
-    <p><a href="https://amzn.to/3LZP5XJ" target="_blank" rel="noopener noreferrer">Shop the rabbitgoo No-Pull Dog Harness</a></p>
+   
     <img 
       src="https://m.media-amazon.com/images/I/71MV2mUhy0L._AC_SL1500_.jpg" 
       alt="rabbitgoo no pull harness" 
       class="product-img" 
     />
     <h3>✔ Recommended: rabbitgoo No-Pull Dog Harness</h3>
-    <p><a href="https://amzn.to/3LZP5XJ" target="_blank" rel="noopener noreferrer">https://amzn.to/3LZP5XJ</a></p>
+    <p><a href="https://amzn.to/3LZP5XJ" target="_blank" rel="noopener noreferrer">Shop the rabbitgoo No-Pull Dog Harness</a></p>
     <p>A comfortable, padded harness that gives your dog freedom to move while keeping them secure and supported. The reflective details help with low-light trails, and the top handle is perfect for helping your pup over logs or rough terrain.</p>
     <p><strong>Beginner Tip:</strong> Before your first hike, let your dog wear the harness around the house or on a short walk. This builds confidence and reduces overstimulation on the trail.</p>
 
@@ -108,7 +108,7 @@ window.posts = [
       class="product-img" 
     />
     <h3>✔ Recommended: iYoShop Hands-Free Dog Leash with Zipper Pouch</h3>
-    <p><a href="https://amzn.to/4a8moBR" target="_blank" rel="noopener noreferrer">https://amzn.to/4a8moBR</a></p>
+    <p><a href="https://amzn.to/4a8moBR" target="_blank" rel="noopener noreferrer">Shop the iYoShop Hands-Free Dog Leash with Zipper Pouch</a></p>
     <p>This waist-worn leash completely changes the hiking experience by freeing your hands. No more shoulder strain or fumbling with poop bags — just an easy, natural walking rhythm. The bungee absorbs sudden pulls, making it great for excitable pups.</p>
     <p><strong>Beginner Tip:</strong> Hands-free leashes help you keep your balance on uneven trails. If your dog tends to zig-zag from excitement, this stabilizes both of you.</p>
     
@@ -121,7 +121,7 @@ window.posts = [
       class="product-img" 
     />
     <h3>✔ Collapsible Bowl: PetBonus 2-Pack Silicone Bowls</h3>
-    <p><a href="https://amzn.to/3M2ORz4" target="_blank" rel="noopener noreferrer">https://amzn.to/3M2ORz4</a></p>
+    <p><a href="https://amzn.to/3M2ORz4" target="_blank" rel="noopener noreferrer">Shop the PetBonus 2-Pack Silicone Bowls</a></p>
     <p>These foldable bowls weigh almost nothing and clip easily onto your backpack. They’re perfect for quick water or snack breaks, especially on warm or uphill hikes.</p>
 
       
@@ -131,7 +131,7 @@ window.posts = [
       class="product-img" 
     />    
     <h3>✔ Travel Bottle: Springer Dog Water Bottle (22oz)</h3>  
-    <p><a href="https://amzn.to/3Kh8eDY" target="_blank" rel="noopener noreferrer">https://amzn.to/3Kh8eDY</a></p>
+    <p><a href="https://amzn.to/3Kh8eDY" target="_blank" rel="noopener noreferrer">Shop the Springer Dog Water Bottle</a></p>
     <p>The easiest way to offer your dog water mid-hike. Squeeze to fill the built-in cup, let your dog drink, and any unused water drains back in — so nothing is wasted. It’s leak-proof and beginner-friendly.</p>
     
     <p><strong>Beginner Tip:</strong> Offer water every 15–20 minutes, even if your dog doesn’t seem thirsty. Excitement can mask early dehydration.</p>
@@ -145,7 +145,7 @@ window.posts = [
       class="product-img" 
     />    
     <h3>✔ Recommended: Wilderdog Cooling Bandana (Pumpkin Spice Plaid)</h3>
-    <p><a href="https://amzn.to/4pndZ1W" target="_blank" rel="noopener noreferrer">https://amzn.to/4pndZ1W</a></p>
+    <p><a href="https://amzn.to/4pndZ1W" target="_blank" rel="noopener noreferrer">Shop the Wilderdog Cooling Bandana</a></p>
     <p>A quick-dry mesh bandana that cools your dog when soaked in water and wrung out. It’s perfect for hot days or dogs with thick coats — and it makes your dog look ridiculously cute in pictures.</p>
     <p><strong>Beginner Tip:</strong> If the trail doesn’t have water sources, soak it before you leave home and pack extra water to refresh it during your hike.</p>
 
@@ -158,7 +158,7 @@ window.posts = [
       class="product-img" 
     />     
     <h3>✔ Paw Balm: Musher’s Secret Dog Paw Wax</h3>
-    <p><a href="https://amzn.to/4ihl9CH" target="_blank" rel="noopener noreferrer">https://amzn.to/4ihl9CH</a></p>
+    <p><a href="https://amzn.to/4ihl9CH" target="_blank" rel="noopener noreferrer">Shop the Musher’s Secret Dog Paw Wax</a></p>
     <p>This natural paw wax protects your dog’s pads from hot pavement, snow, rough ground, and small rocks. It keeps paws soft and safe without needing boots.</p>
 
     <img 
@@ -167,7 +167,7 @@ window.posts = [
       class="product-img" 
     />   
     <h3>✔ Boots: QUMY Dog Shoes</h3>
-    <p><a href="https://amzn.to/43MMPJC" target="_blank" rel="noopener noreferrer">https://amzn.to/43MMPJC</a></p>
+    <p><a href="https://amzn.to/43MMPJC" target="_blank" rel="noopener noreferrer">Shop the QUMY Dog Shoes</a></p>
     <p>If your trail includes rocky climbs, snow, or very hot ground, these boots keep paws protected. They’re secure, durable, and surprisingly lightweight.</p>
     <p><strong>Beginner Tip:</strong> Let your dog practice walking in boots before the hike — in your living room, where the terrain is safe and familiar.</p>
 
@@ -180,7 +180,7 @@ window.posts = [
       class="product-img" 
     />   
     <h3>✔ Recommended: Vital Essentials Freeze-Dried Beef Liver</h3>
-    <p><a href="https://amzn.to/3XN7fi2" target="_blank" rel="noopener noreferrer">https://amzn.to/3XN7fi2</a></p>
+    <p><a href="https://amzn.to/3XN7fi2" target="_blank" rel="noopener noreferrer">Shop the Vital Essentials Freeze-Dried Beef Liver</a></p>
     <p>Dogs go wild for these. They’re high-value, single-ingredient treats that keep your dog’s focus on you, even when the trail is full of new smells and distractions.</p>
     <p><strong>Beginner Tip:</strong> Use treats for “check-ins” — whenever your dog looks back at you on their own. This builds a natural habit of staying connected on the trail.</p>
 
@@ -193,7 +193,7 @@ window.posts = [
       class="product-img" 
     />   
     <h3>✔ Recommended: Wise Owl Outfitters Microfiber Towel</h3>
-    <p><a href="https://amzn.to/48wxJuj" target="_blank" rel="noopener noreferrer">https://amzn.to/48wxJuj</a></p>
+    <p><a href="https://amzn.to/48wxJuj" target="_blank" rel="noopener noreferrer">Shop the Wise Owl Outfitters Microfiber Towel</a></p>
     <p>Tiny, fast-drying, and perfect for muddy paws, creek dips, or wiping off dust and dirt before getting back in the car. It folds down small enough to live in your hiking bag full-time.</p>
 
     <hr />
@@ -205,7 +205,7 @@ window.posts = [
       class="product-img" 
     />   
     <h3>✔ Recommended: Wilderdog Utility Fanny Pack</h3>
-    <p><a href="https://amzn.to/4oXibpp" target="_blank" rel="noopener noreferrer">https://amzn.to/4oXibpp</a></p>
+    <p><a href="https://amzn.to/4oXibpp" target="_blank" rel="noopener noreferrer">Shop the Wilderdog Utility Fanny Pack</a></p>
     <p>This durable treat belt holds everything — treats, keys, poop bags, phone — without weighing you down. It keeps your hands free and makes it easy to reward your dog quickly.</p>
     <p><strong>Beginner Tip:</strong> Make treat access fast. If you have to dig for them, the training moment is usually gone.</p>
 
@@ -218,7 +218,7 @@ window.posts = [
       class="product-img" 
     />   
     <h3>✔ Recommended: Soft Fabric Poop Bag Dispenser</h3>
-    <p><a href="https://amzn.to/4r8Ryzc" target="_blank" rel="noopener noreferrer">https://amzn.to/4r8Ryzc</a></p>
+    <p><a href="https://amzn.to/4r8Ryzc" target="_blank" rel="noopener noreferrer">Shop the Soft Fabric Poop Bag Dispenser</a></p>
     <p>A simple, lightweight poop bag holder that doesn’t bounce or clatter. It clips easily onto any leash or pack and keeps bags neat and ready to go.</p>
    <p><strong>Beginner Tip:</strong>"Leave No Trace" includes dog waste. Have a plan for picking it up and packing it out.</p>
 
@@ -231,7 +231,7 @@ window.posts = [
       class="product-img" 
     />   
     <h3>✔ Recommended: Adventure Medical Kits Trail Dog Medical Kit</h3>
-    <p><a href="https://amzn.to/3XQwf80" target="_blank" rel="noopener noreferrer">https://amzn.to/3XQwf80</a></p>
+    <p><a href="https://amzn.to/3XQwf80" target="_blank" rel="noopener noreferrer">Shop the Adventure Medical Kits Trail Dog Medical Kit</a></p>
     <p>A compact, dog-specific first aid kit with bandages, antiseptic, tweezers, tick tools, and easy-to-follow instructions. It offers peace of mind on longer or more remote hikes.</p>
     <p><strong>Beginner Tip:</strong> Most little mishaps happen stepping out of the car or slipping on loose gravel. A small kit goes a long way toward feeling prepared.</p>
     
@@ -244,17 +244,17 @@ window.posts = [
       class="product-img" 
     />   
     <h3>✔ Day Pack: Ruffwear Front Range Dog Day Pack</h3>
-    <p><a href="https://amzn.to/4oXWK7u" target="_blank" rel="noopener noreferrer">https://amzn.to/4oXWK7u</a></p>
-    <p>This balanced, beginner-friendly dog backpack lets your pup carry some of their own water and treats. It fits comfortably and stays secure even on uneven terrain.</p>
+    <p><a href="https://amzn.to/4oXWK7u" target="_blank" rel="noopener noreferrer">Shop the Ruffwear Front Range Dog Day Pack</a></p>
+    <p>This balanced, beginner-friendly dog backpack lets your pup carry some of their own gear and treats. It fits comfortably and stays secure even on uneven terrain.</p>
 
     <img 
       src="https://m.media-amazon.com/images/I/A16jWtQa3nL._AC_SL1500_.jpg" 
       alt="wilderdog backpack" 
       class="product-img" 
     />   
-    <h3>✔ Harness Backpack: Wilderdog Dog Backpack (Pacific Blue)</h3>
-    <p><a href="https://amzn.to/4oggClo" target="_blank" rel="noopener noreferrer">https://amzn.to/4oggClo</a></p>
-    <p>Alternatively, this rugged backpack–harness hybrid has saddlebags, a built-in poop bag dispenser, and a grab handle. It’s ideal for confident hikers or dogs that enjoy having a “job” on the trail. This option offers size inclusivity for smaller dogs, which may be difficult to find otherwise.</p>
+    <h3>✔ Harness Backpack: Wilderdog Dog Backpack</h3>
+    <p><a href="https://amzn.to/4oggClo" target="_blank" rel="noopener noreferrer">Shop the Wilderdog Dog Backpack</a></p>
+    <p>Alternatively, the Wilderdog Backpack has saddlebags, a built-in poop bag dispenser, and a grab handle. It’s ideal for confident hikers or dogs that enjoy having a “job” on the trail. This option offers size inclusivity for smaller dogs, which may be difficult to find otherwise.</p>
 
     <p><strong>Beginner Tip:</strong> The general rule of thumb is to pack no more than 25% of your dog's body weight. Water can be incredibly heavy, plus sloshing amplifies that and can throw off your dog's balance. Have your dog carry their food and/or gear instead. It'll be easier on them and it'll be easier for you to keep their packs perfectly balanced.</p>
     
