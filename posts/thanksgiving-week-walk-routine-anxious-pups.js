@@ -12,7 +12,7 @@ window.allPosts.push({
 
     <p>Walks aren’t just “exercise” — they’re grounding, regulating, and soothing for dogs. And during a busy holiday week, walks become your pup’s safest reset button. This gentle three-part routine keeps them calm, confident, and connected to you.</p>
 
-    <h2>🕗 1. Morning Sniff Walk — Burn Off the Jitters</h2>
+    <h2>1. Morning Sniff Walk — Burn Off the Jitters</h2>
 
     <p>Think of this as your dog’s “morning reset.” Thanksgiving week usually starts earlier, gets louder faster, and involves more commotion than normal. A short sniffari is the easiest way to gently drain anxious energy before it builds.</p>
 
@@ -32,7 +32,7 @@ window.allPosts.push({
 
     <p>This isn’t a power walk — it’s a calming decompression walk in miniature.</p>
 
-    <h2>🌤 2. Midday Decompression Walk — Especially If Guests Are Over</h2>
+    <h2>2. Midday Decompression Walk — Especially If Guests Are Over</h2>
 
     <p>Even friendly dogs can hit a sensory wall around guests, noise, or new environments. This is the moment when anxiety spikes — and when a decompression walk becomes magic.</p>
 
@@ -56,7 +56,7 @@ window.allPosts.push({
 
     <p>Think of this walk as a mental reset, not physical exercise.</p>
 
-    <h2>🌙 3. Evening Potty + Calm Down Walk — End the Day Softly</h2>
+    <h2>3. Evening Potty + Calm Down Walk — End the Day Softly</h2>
 
     <p>By evening, your dog has likely absorbed a <em>lot</em> of sensory input. Even if they seemed fine, their nervous system still needs a cooldown.</p>
 
@@ -76,7 +76,7 @@ window.allPosts.push({
 
     <p>This puts your dog in the right headspace for sleep — and supports a smoother next day.</p>
 
-    <h2>💛 A Gentle Routine Makes the Week Easier</h2>
+    <h2>A Gentle Routine Makes the Week Easier</h2>
 
     <p>Anxious pups thrive on predictability. This walk routine gives them:</p>
     <ul>
