@@ -3,8 +3,9 @@ window.postScriptFiles = [
   "posts/adhd-morning-routine.js",
   "posts/dog-hiking-essentials.js",
   "posts/adhd-weekend-reset.js",
-  "posts/thanksgiving-week-adhd-to-do-list-no-burnout-edition"
+  "posts/thanksgiving-week-adhd-to-do-list-no-burnout-edition.js"
   // add new post files here
 
 ];
+
 
